@@ -5,7 +5,7 @@ function StringLengths(strings) {
 function filterEvenNum(numbers) {
     return numbers.filter(num => num % 2 === 0);
 }
-function getTopStudents(students) {
+function topStudents(students) {
     return students
         .filter(student => student.score > 75)
         .map(student => student.name);
@@ -15,8 +15,8 @@ function squareNum(numbers) {
     return numbers.map(num => num * num);
 }
 
-function filterUppercaseStrings(mixedArray) {
-    return mixedArray
+function filterUppercaseStrings(mixedArr) {
+    return mixedArr
         .filter(item => typeof item === 'string')
         .map(str => str.toUpperCase());
 }
@@ -32,11 +32,11 @@ const students = [
     { name: "Qrfar", score: 80 },
     { name: "Kerren", score: 89}
 ];
-console.log(getTopStudents(students));
+console.log(topStudents(students));
 
-const nums = [1, 2, 3, 4];
+const nums = [4, 8, 9, 12];
 console.log(squareNum(nums)); 
 
-const mixed = [1, "hello", true, "world", null];
+const mixed = [1, "am", true, "techworld", null];
 console.log(filterUppercaseStrings(mixed)); 
 
